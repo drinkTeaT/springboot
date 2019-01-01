@@ -19,12 +19,16 @@ public class LearnApplicationTests {
 
     @Test
     public void contextLoads() {
+        dataJpa();
+    }
+
+    // spring data jpa
+    private void dataJpa(){
         // 存数据
         customerRepository.save(new Customer("jack","baur"));
         // 查数据
         List<Customer> customers = customerRepository.findByLastName("baur");
         System.out.println(customers.get(0).toString());
     }
-
 }
 
