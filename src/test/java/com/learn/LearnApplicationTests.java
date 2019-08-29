@@ -2,6 +2,7 @@ package com.learn;
 
 import com.learn.jpa.entities.Customer;
 import com.learn.jpa.repository.CustomerRepository;
+import org.apache.catalina.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +25,10 @@ public class LearnApplicationTests {
 
     // spring data jpa
     private void dataJpa(){
-        // 存数据
-        customerRepository.save(new Customer("jack","baur"));
-        // 查数据
-        List<Customer> customers = customerRepository.findByLastName("baur");
-        System.out.println(customers.get(0).toString());
+        UserBean userBean = new UserBean("tom",12);
+        UserBean user = userBean;
+        userBean = null;
+        System.out.println(user.getName());
     }
 }
 

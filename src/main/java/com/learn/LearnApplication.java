@@ -1,5 +1,6 @@
 package com.learn;
 
+import com.learn.aspect.PlainStudent;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
