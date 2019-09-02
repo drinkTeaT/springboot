@@ -56,7 +56,6 @@
 //        //rcm.setDefaultExpiration(60);//秒
 //        return rcm;
 //    }
-//
 //    @Bean
 //    public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory factory) {
 //        StringRedisTemplate template = new StringRedisTemplate(factory);
